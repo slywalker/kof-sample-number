@@ -5,5 +5,22 @@
     },
     "autoload": {
         "psr-0": {"Kof": "src/"}
+    },
+    "_comment": "ここまでが、最低限必要な記述",
+    "type": "library",
+    "description": "Number discrimination library",
+    "keywords": ["number", "even", "odd", "prime"],
+    "homepage": "https://github.com/slywalker/kof-sample-number",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yasuo Harada",
+            "email": "slywalker.net@gmail.com",
+            "homepage": "https://github.com/slywalker"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/slywalker/kof-sample-number/issues",
+        "source": "https://github.com/slywalker/kof-sample-number"
     }
 }
