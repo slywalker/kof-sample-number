@@ -1,0 +1,6 @@
+{
+    "name": "kof-sample/number",
+    "require": {
+        "php": ">=5.4"
+    }
+}
