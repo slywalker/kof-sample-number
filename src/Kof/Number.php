@@ -46,4 +46,34 @@ class Number
         return !$this->isEven($number);
     }
 
+    public function isPrime($number = null)
+    {
+        if (!is_null($number)) {
+            $this->set($number);
+        }
+        $number = $this->get();
+        if ($this->isEven($number)) {
+            return false;
+        }
+        return ($number === $this->_lookupLargestPrimeNumber($number));
+    }
+
+    protected function _lookupLargestPrimeNumber($limit)
+    {
+        $primeNumbers = [2];
+        for ($number = 3; $number <= $limit; $number++) {
+            foreach ($primeNumbers as $primeNumber) {
+                if (($number % $primeNumber) === 0) {
+                    break;
+                }
+
+                if (sqrt($number) < $primeNumber) {
+                    $primeNumbers[] = $number;
+                    break;
+                }
+            }
+        }
+        return end($primeNumbers);
+    }
+
 }

@@ -43,4 +43,12 @@ class NumberTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($Number->isOdd(4));
     }
 
+    public function testIsPrime()
+    {
+        $Number = new Number(3);
+        $this->assertTrue($Number->isPrime());
+        $this->assertTrue($Number->isPrime(97));
+        $this->assertFalse($Number->isPrime(99));
+    }
+
 }
